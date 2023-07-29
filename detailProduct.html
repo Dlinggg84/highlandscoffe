@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    button {
+        background-color: white;
+        font-weight: bolder;
+    }
+    
+    button:hover {
+        background-color: #5c3e31;
+        color: white;
+    }
+    
+    #p {
+        color: #5c3e31;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+
+    <img class="float-left" width="300px" src="{{products[index].Image}}" alt="">
+    <h3><b>Tên loại hàng :</b> {{products[index].name}}</h3>
+    <br>
+    <h3><b>Giá : </b>{{products[index].Price}}</h3>
+    <br>
+    <h3><b>Giá cũ : </b> <b style="color: red;">{{products[index].oldPrice}}</b></h3>
+    <br>
+    <h3><b>Thông tin thêm : </b>{{products[index].Details}}</h3>
+    <br>
+    <h3><b>Đánh giá : </b>{{products[index].Rate}}
+        <span class="hint-star star text-warning" style="font-size: 15px;">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+    </span>
+    </h3>
+    <br>
+    <br>
+    <button style="font-size:17px" ng-click="addCart(products[index])">Thêm vào giỏ hàng</button>
+    <a href="#!/">
+        <p id="p" style="font-size: 18px; font-weight: bolder;">Mua các sản phẩm khác</p>
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighLands Coffee</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="ASM.css">
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        ul.list-person {
+            display: flex;
+        }
+        
+        ul.list-person li {
+            display: block;
+            max-width: 600px;
+            overflow: hidden;
+        }
+        
+        ul.list-person li a img {
+            max-width: 100%;
+            transition: all 0.5s ease-in-out;
+            padding-right: 45px;
+        }
+        
+        ul.list-person li:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="row bg-primary-subtle navbar navbar-expand-sm bg-danger">
+            <a href="Home.html"><img src="images/2560px-Highlands_Coffee_logo.svg.png" width="150px"></a>
+        </header>
+        <div class="row">
+            <div class="col m-0 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-danger" id="nav">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link badge-danger text-light" href="Home.html">
+                                    <h3 class="ml-5">QUÁN CÀ PHÊ </h3><span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link badge-danger text-light" href="Thucdonmenu.html">
+                                    <h3 class="ml-5">THỰC ĐƠN</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link badge-danger text-light" href="tinTuc.html">
+                                    <h3 class="ml-5">TIN TỨC</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link badge-danger text-light" href="congDong.html">
+                                    <h3 class="ml-5">CỘNG ĐỒNG</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link badge-danger text-light" href="veChungtoi.html">
+                                    <h3 class="ml-5">VỀ CHÚNG TÔI</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link badge-danger text-light" href="ngheNghiep.html">
+                                    <h3 class="ml-5">NGHỀ NGHIỆP</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link badge-danger text-light" href="muangay1.html">
+                                    <h3 class="ml-5">MUA NGAY</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+                <div class="row bg-danger-subtle">
+                    <article class="col-9">
+                        <h1 style="color: #5c3e31; font-weight: bolder;">CÀ PHÊ</h1>
+                        <h5>Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ, qua những bí quyết rang xay độc đáo, Highlands Coffee chúng tôi tự hào giới thiệu những dòng sản phẩm Cà phê
+                            mang hương vị đậm đà và tinh tế.
+                        </h5>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/PhindenDa.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Phin Đen Đá</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Phindihanhnhan.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Phindi Hạnh Nhân</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/PhinSUAda.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Phin Sữa Đá</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/latte.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Latte</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/phindenNong.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Phin Đen Nóng</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Capucchino.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Cappuccino</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Mochamachiato.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Mocha Machiato</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/americano.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Americano</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/espresso.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Espresso</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <hr>
+                        <h1 style="color: #5c3e31; font-weight: bolder;">Freeze</h1>
+                        <h5>Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế từ những nguyên liệu thuần túy của Việt Nam.</h5>
+                        <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/FreezeTraXanh.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Freeze Trà Xanh</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/freezeSococla.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Freeze Socola</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/ClassicPhinFreeze.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Classic Phin Freeze</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/caramel.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Caramel Freeze</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Cookies&Cream.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Cookies & Cream</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/FreezeTraXanh.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Freeze Trà Xanh</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <hr>
+                        <h1 style="color: #5c3e31; font-weight: bolder;">TRÀ</h1>
+                        <h5>Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở vị giác của bản thân và tận hưởng một cảm giác thật khoan khoái, tươi mới.</h5>
+                        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Trachanhdao.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Chanh Đào</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Trasenvang.png" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Sen Vàng(Củ Năng)</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Trasenvang2.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Sen Vàng(Sen)</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Traxoainhietdoi.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Xoài Nhiệt Đới</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Tramosori.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Mơ Sơ Ri</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+
+                                                                <img class="mx-auto d-block img-fluid" src="images/Traoihong.png" alt="Iphone13" width="250px">
+
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Ổi Hồng</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+
+                                                                <img class="mx-auto d-block img-fluid" src="images/Traxanhdaudo.jpg" alt="Iphone13" width="250px">
+
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Xanh Đậu Đỏ</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Trathachdao.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Thạch Đào</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/Trathachvai.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Trà Thạch Vải</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <hr>
+                        <h1 style="color: #5c3e31; font-weight: bolder;">
+                            KHÁC
+                        </h1>
+                        <h5>
+                            Sẽ càng ngon miệng hơn khi bạn kết hợp đồ uống với những chiếc bánh ngọt thơm ngon được làm thủ công hàng ngày ngay tại bếp bánh của Highlands Coffee, và cũng đừng quên sắm cho mình bộ bí kíp pha cà phê tại nhà gồm Phin inox, ly sứ Mosaic và cà phê gói
+                            Truyền thống mỗi khi có thời gian rảnh rỗi nhé.
+                        </h5>
+                        <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/truyenthong1kg.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Truyền Thống 1kg</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/truyenthong200.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Truyền thống 200gr</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/sanhdieu200gr.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Sành Điệu 200gr</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/moka200.jpg" alt="Iphone13" width="250px">
+
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="title" style="font-size: 15px;"><b>Moka 200gr</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/disan200.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Di Sản 200gr</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/culi200.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Culi 200gr</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-12 bg-gradient">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/caphedenLon.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Cà Phê Sữa Lon 185ML/Lốc 6 Lon</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/caphesuaLon.jpg" alt="Iphone13" width="250px">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="title" style="font-size: 15px;"><b>Cà Phê Sữa Lon 185ML/Lốc 6 lon</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="card text-center">
+                                                    <ul class="list-person">
+                                                        <li>
+                                                            <a href="">
+                                                                <img class="mx-auto d-block img-fluid" src="images/caphe20goi.jpg" alt="Iphone13" width="250px">
+
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="title" style="font-size: 15px;"><b>Cà Phê Hòa Tan 3 trong 1(20 gói)</b></div>
+                                                    <div class="text" style="font-size: 15px;">400$</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row" id="footer">
+                <div class="col mb-5">
+                    &copy; 2018 Highlands Coffee. All rights reserved
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>

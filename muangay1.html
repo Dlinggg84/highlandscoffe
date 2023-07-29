@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="ASM.css">
+
+    <title>Document</title>
+    <style>
+        .poly-pord {
+            height: 150px;
+            max-width: 250px;
+        }
+        
+        #menu3 ul li a:hover {
+            background-color: #923036;
+            color: white;
+        }
+        
+        #menu3 ul li a {
+            color: rgba(214, 47, 47, 0.856);
+        }
+        
+        button:hover {
+            background-color: #923036;
+            color: white;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        ul.list-person {
+            display: flex;
+        }
+        
+        ul.list-person li {
+            display: block;
+            max-width: 600px;
+            overflow: hidden;
+        }
+        
+        ul.list-person li a img {
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        ul.list-person li:hover img {
+            transform: scale(1.1);
+        }
+        
+        #btn1 {
+            background-color: white;
+            color: black;
+            border: white;
+            font-size: 13px;
+            font-weight: bolder;
+        }
+        
+        #btn1:hover {
+            background-color: #992929;
+            color: white;
+        }
+        
+        #btn2 {
+            background-color: white;
+            color: black;
+            border: white;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        
+        #btn2:hover {
+            background-color: #992929;
+            color: white;
+            border-radius: 8px;
+            transition: all 0.5s;
+        }
+        
+        .btn3 {
+            background-color: white;
+            color: black;
+            border: white;
+            font-weight: bolder;
+            transition: all 0.5s;
+        }
+        
+        #btn3 span {
+            position: relative;
+            transition: 0.5s;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        
+        #btn3 span:after {
+            content: '\90bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            transition: 0.1s;
+        }
+        
+        #btn3:hover {
+            background-color: #992929;
+            color: white;
+        }
+        
+        #btn3:hover span {
+            padding-right: 25px;
+        }
+        
+        #btn3:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        #search-focus {
+            font-size: 13px;
+            border-radius: 8px;
+            width: 20%;
+        }
+        
+        .giamgia {
+            margin-right: 85%;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body ng-app="myapp">
+    <div class="container">
+        <div class="container">
+            <header class="row bg-primary-subtle navbar navbar-expand-sm bg-danger">
+                <a href="Home.html"><img src="images/2560px-Highlands_Coffee_logo.svg.png" width="150px"></a>
+            </header>
+            <div class="row">
+                <div class="col m-0 p-0">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-danger" id="nav">
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link badge-danger text-light" href="Home.html">
+                                        <h3 class="ml-5">QUÁN CÀ PHÊ </h3><span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link badge-danger text-light" href="Thucdonmenu.html">
+                                        <h3 class="ml-5">THỰC ĐƠN</h3>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link badge-danger text-light" href="tinTuc.html">
+                                        <h3 class="ml-5">TIN TỨC</h3>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link badge-danger text-light" href="congDong.html">
+                                        <h3 class="ml-5">CỘNG ĐỒNG</h3>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link badge-danger text-light" href="veChungtoi.html">
+                                        <h3 class="ml-5">VỀ CHÚNG TÔI</h3>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link badge-danger text-light" href="ngheNghiep.html">
+                                        <h3 class="ml-5">NGHỀ NGHIỆP</h3>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link badge-danger text-light" href="muangay1.html">
+                                        <h3 class="ml-5">MUA NGAY</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row" id="menu3">
+                    <ul class="nav justify-content-center" style="font-size: 15px;">
+
+                        <span class=" border border-danger m-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><b>Cà phê rang xay</b></a>
+                        </li>
+                    </span>
+                        <span class="border border-danger m-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><b>Cà phê uống liền</b></a>
+                        </li>
+                    </span>
+                        <span class="border border-danger m-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><b>Cà phê hòa tan</b></a>
+                        </li>
+                    </span>
+                        <span class="border border-danger m-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><b>Cà phê hạt</b></a>
+                        </li>
+                    </span>
+                        <span class="border border-danger m-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><b>Cà phê hộp giấy</b></a>
+                        </li>
+                    </span>
+                        <span class="border border-danger m-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><b>Cà phê bột xay</b></a>
+                        </li>
+                    </span>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <img src="images/muaNgay1.webp" alt="" width="100%">
+            </div>
+
+
+
+            <br>
+            <div class="col-md-15">
+                <div class="row pl-5">
+                    <div class="col-sm-2">
+                        <a href=""><img class="img-fluid" src="images/giaonhanh" width="100px" alt=""></a>
+                        <br>
+                        <div class="p-4"><a href="" style="font-size: 15px; color:#923036 ;"><b>Giao nhanh</b></a> </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href=""><img class="img-fluid" src="images/flashsale" width="100px" alt=""></a>
+                        <br>
+                        <div class="p-4"><a href="" style="font-size: 15px; color:#923036 ;"><b>Flash sale</b></a> </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href=""><img class="img-fluid" src="images/cuahang" width="100px" alt=""></a>
+                        <br>
+                        <div class="p-4"><a href="" style="font-size: 15px; color:#923036 ;"><b>Cửa hàng</b></a> </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href=""><img class="img-fluid" src="images/cachpha" width="100px" alt=""></a>
+                        <br>
+                        <div class="p-4"><a href="" style="font-size: 15px; color:#923036 ;"><b>Cách pha</b></a> </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href=""><img class="img-fluid" src="images/banchay" width="100px" alt=""></a>
+                        <br>
+                        <div class="p-4"><a href="" style="font-size: 15px; color:#923036 ;"><b>Bán chạy</b></a> </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href=""><img class="img-fluid" src="images/lienhe" width="100px" alt=""></a>
+                        <br>
+                        <div class="p-4 pl-5"><a href="" style="font-size: 15px; color:#923036 ;"><b>Liên hệ</b></a> </div>
+                    </div>
+                </div>
+
+
+                <hr>
+                <br>
+                <h1 style="color:#923036 ; font-weight: bolder;">ƯU ĐÃI CỦA BẠN</h1>
+                <div class="col-md-12 bg-gradient">
+                    <div class="row pl-4">
+                        <div class="col-sm-3">
+
+                            <div class="card">
+                                <span class="border border-danger">
+                                <div class="card-body">
+                                    <h3> <b class="text-danger">Giao hàng toàn quốc </b><br> Highlands Coffe giao hàng toàn quốc,<br>không giới hạn giá trị đơn hàng.</h3>
+                                </div>
+                                 <div class="card-footer text-right">
+                                    <button style="font-size: 15px;">Lưu</button>
+                                </div>
+                                </span>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-3">
+
+                            <div class="card">
+                                <span class="border border-danger">
+                                <div class="card-body">
+                                    <h3> <b class="text-danger">Ưu đãi tại cửa hàng</b><br>Nhận ưu đãi tại quán khi mua hàng tại<br>website chính hãng Highlands Coffe</h3>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <button style="font-size: 15px;">Lưu</button>
+                                </div>
+                            </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <span class="border border-danger">
+                            <div class="card-body">
+                                <h3> <b class="text-danger">Voucher giảm đến 50k</b> <br> Sử dụng voucher giảm thêm 15.000đ, 30.000đ, 5000đ... tại phần thanh <br> toán.</h3>
+                                </span>
+                            </div>
+                            <div class="card-footer text-right">
+                                <button style="font-size: 15px;">Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <span class="border border-danger">
+                                <div class="card-body">
+                                    <h3><b class="text-danger">Voucher giảm đến 25%</b> <br>Giảm từ 15%-25% các sản phẩm cà phê và freeze, các loại bánh ngọt,<br>số lượng có hạn.</h3>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <button style="font-size: 15px;">Lưu</button>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card-header" style="background-color: rgba(255, 177, 146, 0.555);">
+                <div class="row ml-4">
+                    <img src="images/iconsale" alt="">
+                    <b class="ml-4" style="font-size: 20px; color: #923036;">DEAL ĐANG DIỄN RA |</b>
+                    <p class="ml-5" style="font-size: 20px; color: #923036; font-weight: bolder;" width="100%" id="demo"></p>
+                </div>
+            </div>
+            <br>
+            <a class="text-right" href="#!cart"><img width="80px" src="images/cart.jpg" alt="">
+            </a>
+            <br>
+            <span class="pt-4" style="font-size: 20px; font-weight: bolder;">Số lượng: {{cart.length}}</span>
+            <div class="row d-flex justify-content-center">
+                <div>
+                    <hr>
+                    <div class="pt-4" ng-view></div>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <div ng-controller="myCtrl">
+                <div ng-app="myApp">
+
+                    <!-- <input type="text" ng-model="search"> -->
+                    <div class="text-right">
+                        <input id="search-focus" type="text" ng-model="search" placeholder="Nhập tên sản phẩm">
+                        <button id="btn2" ng-click="searchSP()" data-toggle="modal" data-target="#exampleModal">Tìm kiếm</button>
+                    </div>
+                    <h1 class="text-center" style="font-weight: bolder; color:#992929 ;">SẢN PHẨM BÁN CHẠY</h1>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><b>DANH SÁCH SẢN PHẨM</b></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="card m-3" ng-repeat="p in products | filter: search">
+
+                                            <div class="card text-center">
+                                                <ul class="list-person">
+                                                    <li>
+                                                        <div>
+                                                            <a href="#!detail/{{p.id}}"><img width="100%" src="{{p.Image}}" class="poly-pord"></a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                                <div><b>{{p.name}}</b></div>
+                                                <div><b style="color: red;">{{p.Price}}$</b></div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div style="font-size: 15px;"><b>{{p.name}}</b></div>
+                                        <div style="font-size: 15px; color: red;"><b>${{p.Price}}</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <div ng-controller="myCtrl">
+                    <button id="btn1" class="btn btn-primary" ng-click="tang()">Tăng dần</button>
+                    <button id="btn1" class="btn btn-primary" ng-click="giam()">Giảm dần</button>
+                    <div class="row">
+                        <div class="row">
+                            <div class="m-3 ml-4" ng-repeat="p in products | filter: {kind : 'banchay'}| orderBy : sort| limitTo:number:0">
+                                <div class="text-center pr-4">
+                                    <ul class="list-person">
+                                        <li>
+                                            <a href="#!detail/{{p.id}}"><img class="img-fluid" width="200px" src="{{p.Image}}" class="poly-pord"></a>
+                                        </li>
+                                    </ul>
+                                    <div style="font-size: 15px;"><b>{{p.name}}</b></div>
+                                    <div style="font-size: 15px; color: red;"><b>${{p.Price}}</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btn3" class="btn" ng-click="seeall()"><span>Xem thêm</span></button>
+                </div>
+                <hr>
+
+                <h1 class="text-center" style="font-weight: bolder; color:#992929">CÀ PHÊ RANG XAY</h1>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"><b>DANH SÁCH SẢN PHẨM</b></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="card m-3" ng-repeat="p in search | filter: search">
+
+                                        <div class="card text-center">
+                                            <ul class="list-person">
+                                                <li>
+                                                    <div>
+                                                        <a href="#!detail/{{p.id}}"><img width="100%" src="{{p.Image}}" class="poly-pord"></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <div><b>{{p.name}}</b></div>
+                                            <div><b style="color: red;">{{p.Price}}$</b></div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div style="font-size: 15px;"><b>{{p.name}}</b></div>
+                                    <div style="font-size: 15px; color: red;"><b>${{p.Price}}</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div ng-controller="myCtrl">
+
+                <button id="btn1" class="btn btn-primary" ng-click="tang()">Tăng dần</button>
+                <button id="btn1" class="btn btn-primary" ng-click="giam()">Giảm dần</button>
+                <div class="row">
+                    <div class="row">
+                        <div class=" m-3 ml-4" ng-repeat="p in products | filter: {kind : 'caphexay'} | orderBy : sort | limitTo:number:0">
+                            <div class="text-center pr-4">
+                                <div class="giamgia" style="display: flex;font-size: 15px;"><b>{{p.Discount}}</b></div>
+                                <ul class="list-person">
+                                    <li>
+                                        <a href="#!detail/{{p.id}}"><img class="img-fluid" width="200px" src="{{p.Image}}" class="poly-pord"></a>
+                                    </li>
+
+                                </ul>
+                                <div style="font-size: 15px;"><b>{{p.name}}</b></div>
+                                <div style="font-size: 15px; color: red;"><b>${{p.Price}}</b></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="btn3" class="btn" ng-click="seeall()"><span>Xem thêm</span></button>
+            </div>
+
+
+
+            <hr>
+            <h1 class="text-center" style="font-weight: bolder; color:#992929">CÀ PHÊ UỐNG LIỀN</h1>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"><b>DANH SÁCH SẢN PHẨM</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="card m-3" ng-repeat="p in products | filter: {kind:uonglien}">
+
+                                    <div class="card text-center">
+                                        <ul class="list-person">
+                                            <li>
+                                                <div>
+                                                    <a href="#!detail/{{p.id}}"><img width="100%" src="{{p.Image}}" class="poly-pord"></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div><b>{{p.name}}</b></div>
+                                        <div><b style="color: red;">{{p.Price}}$</b></div>
+                                    </div>
+
+
+
+                                </div>
+                                <div style="font-size: 15px;"><b>{{p.name}}</b></div>
+                                <div style="font-size: 15px; color: red;"><b>${{p.Price}}</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+
+            </div>
+            </di>
+            <br>
+            <br>
+            <div ng-controller="myCtrl">
+                <div>
+                    <button id="btn1" class="btn btn-primary" ng-click="tang()">Tăng dần</button>
+                    <button id="btn1" class="btn btn-primary" ng-click="giam()">Giảm dần</button>
+
+                </div>
+
+
+
+                <div class="row">
+                    <div class="row">
+                        <div class="m-3 ml-4" ng-repeat="p in products | filter: {kind : 'uonglien'}| orderBy : sort| limitTo:number:0">
+                            <div class="text-center pr-4">
+                                <ul class="list-person">
+                                    <li>
+                                        <a href="#!detail/{{p.id}}"><img class="img-fluid" width="200px" src="{{p.Image}}" class="poly-pord"></a>
+                                    </li>
+                                </ul>
+                                <div style="font-size: 15px;"><b>{{p.name}}</b></div>
+                                <div style="font-size: 15px; color: red;"><b>${{p.Price}}</b></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="btn3" class="btn" ng-click="seeall()"><span>Xem thêm</span></button>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <footer>
+            <div class="row" id="footer">
+                <div class="col mb-5">
+                    &copy; 2018 Highlands Coffee. All rights reserved
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var indexCart = 0;
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.controller("myCtrl", function($scope, $rootScope, $routeParams) {
+            //Thêm sản phẩm
+            $scope.addCart = function(p) {
+                if (typeof $rootScope.cart == 'undefined') {
+                    $rootScope.cart = [];
+                };
+                if ($rootScope.cart.filter(i => i.id == p.id).length == 0) {
+                    $rootScope.cart.push(p);
+                    $rootScope.cart[indexCart].quantity = 1;
+                    indexCart++;
+                }
+            }
+            $scope.number = 4;
+            $scope.seeall = function() {
+                $scope.number = $scope.products.length;
+            }
+
+
+
+            $rootScope.sumMoney = 0;
+            //Tính tổng tiền bên giỏ hàng
+            if (typeof $rootScope.cart != 'undefined') { //Có giỏ hàng mới tính tổng
+                for (var i = 0; i < $rootScope.cart.length; i++) {
+                    $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price;
+                }
+            }
+            //Nhấn nút Cộng để thêm sản phẩm
+            $scope.addClick = function(index) {
+                    $rootScope.cart[index].quantity = $rootScope.cart[index].quantity + 1;
+                    if (typeof $rootScope.cart != 'undefined') {
+                        $rootScope.sumMoney = 0;
+                        for (var i = 0; i < $rootScope.cart.length; i++) {
+                            $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price;
+                        }
+                    }
+                }
+                //Nhấn nút  để Tru sản phẩm
+            $scope.subClick = function(index) {
+                    $rootScope.cart[index].quantity = $rootScope.cart[index].quantity - 1;
+                    if (typeof $rootScope.cart != 'undefined') {
+                        $rootScope.sumMoney = 0;
+                        for (var i = 0; i < $rootScope.cart.length; i++) {
+                            $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price;
+                        }
+                    }
+                }
+                //Xóa sản phẩm trong giỏ hàng
+            $scope.delProduct = function(index) {
+                $rootScope.cart.splice(index, 1);
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].Price;
+                    }
+                }
+            }
+            $scope.sort = 'Price';
+            $scope.tang = function() {
+                $scope.sort = 'Price';
+            }
+            $scope.giam = function() {
+                $scope.sort = '-Price';
+            }
+            $scope.products = [{
+                id: "sp1",
+                name: "Cà phê bột Highlands 20gr",
+                Image: "images/spbanchay1.webp",
+                Price: 1200,
+                kind: "banchay",
+                Details: "Cà Phê Rang Xay Moka Highlands Coffee được chọn lọc kỹ từ những hạt cà phê thượng hạng trên vùng cao nguyên Việt Nam, là loại cà phê quý hiếm dành cho người sành cà phê ở Việt Nam và thế giới. Ly cà phê khi pha cho hương thơm nồng nàn, vị cà phê đặc trưng, dư vị kéo dài, thể hiện đẳng cấp và sự tinh tế của người thưởng thức. "
+            }, {
+                id: "sp2",
+                name: "Thùng 24 lon cà phê",
+                Image: "images/spbanchay3.webp",
+                Price: 2100,
+                kind: "banchay",
+                Details: "Cà Phê Rang Xay Moka Highlands Coffee được chọn lọc kỹ từ những hạt cà phê thượng hạng trên vùng cao nguyên Việt Nam, là loại cà phê quý hiếm dành cho người sành cà phê ở Việt Nam và thế giới. Ly cà phê khi pha cho hương thơm nồng nàn, vị cà phê đặc trưng, dư vị kéo dài, thể hiện đẳng cấp và sự tinh tế của người thưởng thức. "
+            }, {
+                id: "sp3",
+                name: "Cà phê bột Highlands 20gr",
+                Image: "images/spbanchay2.webp",
+                Price: 4200,
+                kind: "banchay",
+                Details: "Cà Phê Rang Xay Moka Highlands Coffee được chọn lọc kỹ từ những hạt cà phê thượng hạng trên vùng cao nguyên Việt Nam, là loại cà phê quý hiếm dành cho người sành cà phê ở Việt Nam và thế giới. Ly cà phê khi pha cho hương thơm nồng nàn, vị cà phê đặc trưng, dư vị kéo dài, thể hiện đẳng cấp và sự tinh tế của người thưởng thức. "
+            }, {
+                id: "sp4",
+                name: "Cà phê bột Highlands 20gr",
+                Image: "images/spbanchay1.webp",
+                Price: 1200,
+                kind: "banchay",
+                Details: "Cà Phê Rang Xay Moka Highlands Coffee được chọn lọc kỹ từ những hạt cà phê thượng hạng trên vùng cao nguyên Việt Nam, là loại cà phê quý hiếm dành cho người sành cà phê ở Việt Nam và thế giới. Ly cà phê khi pha cho hương thơm nồng nàn, vị cà phê đặc trưng, dư vị kéo dài, thể hiện đẳng cấp và sự tinh tế của người thưởng thức. "
+            }, {
+                id: "sp5",
+                name: "Thùng 24 lon cà phê",
+                Image: "images/spbanchay3.webp",
+                Price: 1500,
+                kind: "banchay",
+                Details: "Cà Phê Rang Xay Moka Highlands Coffee được chọn lọc kỹ từ những hạt cà phê thượng hạng trên vùng cao nguyên Việt Nam, là loại cà phê quý hiếm dành cho người sành cà phê ở Việt Nam và thế giới. Ly cà phê khi pha cho hương thơm nồng nàn, vị cà phê đặc trưng, dư vị kéo dài, thể hiện đẳng cấp và sự tinh tế của người thưởng thức. "
+            }, {
+                id: "sp6",
+                name: "Cà phê truyền thống 20gr",
+                Image: "images/spbanchay2.webp",
+                Price: 1400,
+                kind: "banchay",
+                Details: "Thưởng thức Cà Phê Sữa Highlands Coffee 185ml, cảm nhận sự hòa quyện tuyệt vời của vị cà phê rang đặc trưng, sữa cùng vị kem béo chỉ với thao tác bật nắp nhẹ nhàng. Cà Phê Sữa Highlands Coffee 185ml mang lại cho bạn sự tiện dụng, không cần nhiều thời gian pha chế, giúp bạn tỉnh táo để tập trung và năng động mỗi ngày."
+            }, {
+                id: "sp7",
+                name: "Cà phê Lon 25ml",
+                Image: "images/spbanchay3.webp",
+                Price: 2100,
+                kind: "banchay",
+                Details: "Cà phê Bột Truyền Thống Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản. Không chỉ dùng trong gia đình, với bao bì lịch sự còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp. "
+            }, {
+                id: "sp8",
+                name: "Combo 2 truyền thống 30gr",
+                Image: "images/spbanchay4.webp",
+                Price: 1800,
+                kind: "banchay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp9",
+                name: "Cà phê xay truyền thống 30gr ",
+                Image: "images/rangxay1.webp",
+                Price: 4500,
+                oldPrice: 3800,
+                Discount: "20%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp10",
+                name: "Cà phê xay truyền thống 30gr",
+                Image: "images/rangxay2.webp",
+                Price: 3000,
+                oldPrice: 5500,
+                Discount: "65%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp11",
+                name: "Cà phê xay truyền thống 30gr",
+                Image: "images/rangxay3.webp",
+                Price: 1200,
+                oldPrice: 4000,
+                Discount: "35%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp12",
+                name: "Cà phê xay truyền thống 30gr",
+                Image: "images/rangxay4.webp",
+                Price: 4000,
+                oldPrice: 4800,
+                Discount: "20%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp13",
+                name: "Combo 2 truyền thống 30gr",
+                Image: "images/rangxay5.webp",
+                Price: 3800,
+                oldPrice: 4500,
+                Discount: "20%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp14",
+                name: "Combo 5 truyền thống 20gr",
+                Image: "images/rangxay6.webp",
+                Price: 2300,
+                oldPrice: 3700,
+                Discount: "40%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp15",
+                name: "Cà phê truyền thống Highlands",
+                Image: "images/rangxay3.webp",
+                Price: 2000,
+                oldPrice: 2600,
+                Discount: "30%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp16",
+                name: "Combo 2 truyền thống 30gr",
+                Image: "images/rangxay4.webp",
+                Price: 1500,
+                oldPrice: 1800,
+                Discount: "20%",
+                kind: "caphexay",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp17",
+                name: "Lốc 4 hộp cà phê sữa",
+                Image: "images/uonglien1.webp",
+                Price: 1900,
+                Discount: 200,
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp18",
+                name: "Lốc 4 hộp cà phê sữa",
+                Image: "images/uonglien1.webp",
+                Price: 2150,
+                Discount: 200,
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp19",
+                name: "Lốc 4 hộp cà phê sữa",
+                Image: "images/uonglien1.webp",
+                Price: 9100,
+
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp20",
+                name: "Lốc 4 hộp cà phê sữa",
+                Image: "images/uonglien1.webp",
+                Price: 2400,
+                Discount: 200,
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp21",
+                name: "Cà phê đen lon 25ml",
+                Image: "images/uonglien5.webp",
+                Price: 4200,
+
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp22",
+                name: "Thùng 24 lon cà phê",
+                Image: "images/uonglien2.webp",
+                Price: 1400,
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp23",
+                name: "Thùng 24 lon cà phê sữa",
+                Image: "images/uonglien3.webp",
+                Price: 4100,
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }, {
+                id: "sp24",
+                name: "Cà phê đen lon 25ml",
+                Image: "images/uonglien5.webp",
+                Price: 1400,
+                kind: "uonglien",
+                Details: "Cà phê Moka Highlands Coffee được đóng gói tiện lợi cho việc sử dụng và bảo quản, không chỉ thích hợp để dùng trong gia đình mà với bao bì lịch sự, hiện đại còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp."
+            }];
+            //Truyền tham số index từ trang chủ đến trang sản phẩm chi tiết
+            $scope.index = $routeParams.url;
+            $scope.index = $scope.products.findIndex(record => record.id == $routeParams.url);
+
+        });
+        app.config(function($routeProvider) {
+            $routeProvider
+                .when("/detail/:url", {
+                    templateUrl: "detailProduct.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/cart", {
+                    templateUrl: "cart.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/about", {
+                    templateUrl: "about.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .when("/contact", {
+                    templateUrl: "contact.html?" + Math.random(),
+                    controller: "myCtrl"
+                })
+                .otherwise({
+                    templateUrl: "listProduct.html",
+                    controller: "myCtrl"
+                })
+        });
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + ": " + hours + ": " +
+                minutes + ": " + seconds;
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>

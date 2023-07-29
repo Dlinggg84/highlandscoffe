@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .link {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <header>
+        <div>
+            <h1 class="text-center" style="font-weight: bolder; color:#853232; font-size: 35px ;">ĐƠN HÀNG ĐÃ ĐẶT</h1>
+        </div>
+    </header>
+
+    <table class="table" style="font-size: 23px;">
+
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+            <th> </th>
+        </tr>
+        <tr ng-repeat="c in cart track by $index">
+            <td>{{c.name}}</td>
+            <td><img width="100px" src="{{c.Image}}" alt=""></td>
+            <td>{{c.Price}}</td>
+            <td><span ng-click="subClick($index)">-</span> {{c.quantity}} <span ng-click="addClick($index)">+</span></td>
+            <td>{{c.Price*c.quantity}}</td>
+
+            <td> <span ng-click="delProduct($index)"><b>Xóa</b></span></td>
+        </tr>
+        <tr>
+            <td colspan="4"><b>Tổng tiền:</b></td>
+            <td colspan="2">{{sumMoney}}</td>
+        </tr>
+    </table>
+    <a class="link" href="#!/">
+        <p style="font-size:20px; font-weight: bolder; color:#912727; ;">Mua các sản phẩm khác</p>
+    </a>
+</body>
+
+</html>
